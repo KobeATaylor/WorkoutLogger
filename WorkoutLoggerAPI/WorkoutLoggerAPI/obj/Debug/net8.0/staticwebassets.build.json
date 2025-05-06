@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "J+CIRWQHhJSutpEcEmd5vwEINoK3jQDY7jkkr5zbQFY=",
+  "Source": "WorkoutLoggerAPI",
+  "BasePath": "_content/WorkoutLoggerAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
