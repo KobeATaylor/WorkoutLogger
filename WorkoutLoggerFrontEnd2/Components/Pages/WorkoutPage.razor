@@ -1,0 +1,56 @@
+﻿@page "/create-workout"
+@inject HttpClient Http
+@using WorkoutLoggerFrontEnd2.Models
+@using Radzen.Blazor
+@using Radzen
+
+<h1>Create a New Workout</h1>
+
+<RadzenRow AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap" Gap="1rem" class="rz-p-sm-12">
+    <RadzenColumn Size="12" SizeMD="6" SizeLG="3">
+        <RadzenFormField Text="Name" Style="width: 100%;">
+            <RadzenTextBox @bind-Value="workoutName" />
+        </RadzenFormField>
+    </RadzenColumn>
+    <RadzenColumn Size="12" SizeMD="6" SizeLG="3">
+        <RadzenFormField Text="TypeID" Style="width: 100%;">
+            <RadzenTextBox @bind-Value="typeId" />
+        </RadzenFormField>
+    </RadzenColumn>
+    <RadzenColumn Size="12" SizeMD="6" SizeLG="3">
+        <RadzenFormField Text="Add Exercise" Style="width: 100%;">
+            <RadzenTextBox @bind-Value="addExercise" />
+        </RadzenFormField>
+    </RadzenColumn>
+</RadzenRow>
+
+<RadzenButton Text="Create Workout"
+              Click="SubmitWorkout"
+              Style="margin-top: 1rem;"
+              ButtonStyle="ButtonStyle.Primary" />
+
+@code {
+    string workoutName = "";
+    string typeId = ""; // Placeholder for later
+    string addExercise = ""; // Placeholder for later
+
+    async Task SubmitWorkout()
+    {
+        var newWorkout = new Workout
+            {
+                Name = workoutName
+            };
+
+        var response = await Http.PostAsJsonAsync("api/WorkoutLogger/PostWorkout", newWorkout);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Workout created!");
+            workoutName = "";
+        }
+        else
+        {
+            Console.WriteLine($"Failed to create workout. Status: {response.StatusCode}");
+        }
+    }
+}
