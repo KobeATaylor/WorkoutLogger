@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace WorkoutLoggerAPI.Models
 {
@@ -11,6 +12,9 @@ namespace WorkoutLoggerAPI.Models
         public string? Name { get; set; }
         public int Sets { get; set; }
         public int Reps { get; set; }
-        public int WorkoutId { get; set; }
+        [JsonIgnore]
+
+        public ICollection<WorkoutExercise> WorkoutExercises { get; set; } = new List<WorkoutExercise>();
+
     }
 }

@@ -9,5 +9,6 @@ namespace WorkoutLoggerFrontEnd2.Models
         [Key]
         public int WorkoutId { get; set; }
         public string? Name { get; set; }
+        public List<Exercises> Exercises { get; set; } = new();
     }
 }

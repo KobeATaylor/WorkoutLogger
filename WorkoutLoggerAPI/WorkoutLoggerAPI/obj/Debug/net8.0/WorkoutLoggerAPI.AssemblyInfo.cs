@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkoutLoggerAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e91aac05a106920f31cf00e32c4763f2ca84d41e")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkoutLoggerAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkoutLoggerAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

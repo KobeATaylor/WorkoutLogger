@@ -1,25 +1,19 @@
 [
   {
     "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutLoggerController",
-    "Method": "DeleteExercise",
-    "RelativePath": "api/WorkoutLogger/DeleteExercise",
-    "HttpMethod": "DELETE",
+    "Method": "AssignExerciseToWorkout",
+    "RelativePath": "api/WorkoutLogger/AssignExerciseToWorkout",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int64",
-        "IsRequired": false
+        "Name": "workoutexercise",
+        "Type": "WorkoutLoggerAPI.DTOs.WorkoutExerciseDTO",
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutLoggerController",
@@ -31,26 +25,10 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int64",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutLoggerController",
-    "Method": "GetExercises",
-    "RelativePath": "api/WorkoutLogger/GetExercises",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -65,8 +43,39 @@
   },
   {
     "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutLoggerController",
+    "Method": "RemoveExerciseFromWorkout",
+    "RelativePath": "api/WorkoutLogger/RemoveExerciseFromWorkout",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "workoutId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "exerciseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutLoggerAPI.Controllers.ExerciseController",
+    "Method": "GetExercise",
+    "RelativePath": "Exercise/GetExercise",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutLoggerAPI.Controllers.ExerciseController",
     "Method": "PostExercise",
-    "RelativePath": "api/WorkoutLogger/PostExercise",
+    "RelativePath": "Exercise/PostExercise",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -77,18 +86,38 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutLoggerController",
+    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutController",
+    "Method": "getWorkouts",
+    "RelativePath": "Workout/GetWorkout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutController",
+    "Method": "GetWorkoutById",
+    "RelativePath": "Workout/GetWorkoutById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutController",
     "Method": "PostWorkout",
-    "RelativePath": "api/WorkoutLogger/PostWorkout",
+    "RelativePath": "Workout/PostWorkout",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -99,56 +128,22 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutLoggerController",
-    "Method": "UpdateExercise",
-    "RelativePath": "api/WorkoutLogger/UpdateExercise",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "exercise",
-        "Type": "WorkoutLoggerAPI.Models.Exercises",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutLoggerController",
+    "ContainingType": "WorkoutLoggerAPI.Controllers.WorkoutController",
     "Method": "UpdateWorkout",
-    "RelativePath": "api/WorkoutLogger/UpdateWorkout",
+    "RelativePath": "Workout/UpdateWorkout",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "workout",
+        "Name": "updateWorkout",
         "Type": "WorkoutLoggerAPI.Models.Workout",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]

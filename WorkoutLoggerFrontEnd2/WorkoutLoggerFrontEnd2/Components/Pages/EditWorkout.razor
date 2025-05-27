@@ -1,0 +1,100 @@
+﻿@page "/editworkout/{id:int}"
+@rendermode InteractiveServer
+
+@using WorkoutLoggerFrontEnd2.Models
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Radzen
+@using Radzen.Blazor
+
+<h3>Edit Workout</h3>
+
+@if (workout == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <RadzenTemplateForm Data="@workout" TItem="Workout" Submit="@HandleSubmit" Method="post">
+        <RadzenFieldset Text="Workout Info">
+            <RadzenFormField Text="Workout Name">
+                <RadzenTextBox @bind-Value="workout.Name" Name="Name" Style="width: 100%;" />
+            </RadzenFormField>
+        </RadzenFieldset>
+
+        <RadzenButton ButtonType="ButtonType.Submit" Text="Save Changes" Style="margin-top: 20px;" />
+    </RadzenTemplateForm>
+
+    <RadzenFormField Text="Select Exercises">
+        <RadzenDropDown @bind-Value="selectedExerciseIds"
+                        Data="@availableExercises"
+                        TextProperty="Name"
+                        ValueProperty="ExerciseId"
+                        Multiple="true"
+                        Placeholder="Choose exercises"
+                        Style="width: 100%;" />
+    </RadzenFormField>
+
+    <p style="color: green">@statusMessage</p>
+}
+
+@code {
+    [Parameter] public int id { get; set; }
+    List<Exercises> availableExercises = new();
+    List<int> selectedExerciseIds = new();
+
+
+    Workout? workout;
+    string statusMessage = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            workout = await Http.GetFromJsonAsync<Workout>($"Workout/GetWorkoutById?id={id}");
+            availableExercises = await Http.GetFromJsonAsync<List<Exercises>>("Exercise/GetExercise");
+            if (workout?.Exercises != null)
+            {
+                selectedExerciseIds = workout.Exercises.Select(e => e.ExerciseId).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            statusMessage = $"Error loading workout: {ex.Message}";
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            var response = await Http.PutAsJsonAsync("Workout/UpdateWorkout", workout);
+            foreach (var exerciseId in selectedExerciseIds)
+            {
+                var dto = new WorkoutExerciseDTO
+                    {
+                        WorkoutId = workout.WorkoutId,
+                        ExerciseId = exerciseId
+                    };
+
+                await Http.PostAsJsonAsync("WorkoutLogger/AssignExerciseToWorkout", dto);
+            }
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                statusMessage = "Workout updated!";
+                Navigation.NavigateTo("/myworkouts");
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                statusMessage = $"Failed: {response.StatusCode}, {error}";
+            }
+        }
+        catch (Exception ex)
+        {
+            statusMessage = $"Exception: {ex.Message}";
+        }
+    }
+}

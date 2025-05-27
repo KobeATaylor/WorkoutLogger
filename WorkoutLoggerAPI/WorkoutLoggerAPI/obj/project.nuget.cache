@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mekQluYbU+w=",
+  "dgSpecHash": "qW/WyATzTE4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj",
+  "projectFilePath": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ktaylor2\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ktaylor2\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

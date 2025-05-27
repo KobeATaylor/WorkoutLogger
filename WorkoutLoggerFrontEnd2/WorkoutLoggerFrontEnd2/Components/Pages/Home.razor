@@ -1,7 +1,18 @@
 ﻿@page "/"
-
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
 <PageTitle>Home</PageTitle>
+<RadzenButton Shade="Shade.Lighter"
+              ButtonType="ButtonType.Button"
+              Click="@GoToMyWorkouts"
+              Text="Go to MyWorkouts"
+              style="background-color: #d50032; color: white; display: block; margin: 16px auto 0;" />
 
-<h1>Hello, world!</h1>
+<blockquote style="margin-top: 2rem; font-style: italic;">
+    "An egg doesn't break as long as you take care of it." – Kobe Taylor
+</blockquote>
 
-Welcome to your new app.
+@code
+{
+    public void GoToMyWorkouts() => Navigation.NavigateTo("/myworkouts");
+}

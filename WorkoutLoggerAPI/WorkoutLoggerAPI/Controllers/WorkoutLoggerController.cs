@@ -1,6 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WorkoutLoggerAPI.Data;
+using WorkoutLoggerAPI.DTOs;
 using WorkoutLoggerAPI.Models;
+
 namespace WorkoutLoggerAPI.Controllers
 {
     [ApiController]
@@ -8,69 +11,90 @@ namespace WorkoutLoggerAPI.Controllers
     public class WorkoutLoggerController : ControllerBase
     {
         private readonly WorkoutLoggerDb _context;
+
         public WorkoutLoggerController(WorkoutLoggerDb context)
         {
             _context = context;
         }
+
         [HttpGet("GetWorkout")]
-        public IActionResult GetWorkout()
+        public async Task<IActionResult> GetWorkout()
         {
-            return Ok(_context.Workouts.ToList());
-        }
-        [HttpGet("GetExercises")]
-        public IActionResult GetExercises()
-        {
-            return Ok(_context.Exercises.ToList());
-        }
-        [HttpPost("PostWorkout")]
-        public void PostWorkout(Workout workout)
-        {
-            _context.Workouts.Add(workout);
-            _context.SaveChanges();
-        }
-        [HttpPost("PostExercise")]
-        public void PostExercise(Exercises exercises)
-        {
-            _context.Exercises.Add(exercises);
-            _context.SaveChanges();
+            var workouts = await _context.Workouts
+                .Include(w => w.WorkoutExercises)
+                    .ThenInclude(we => we.Exercises)
+                .ToListAsync();
+
+            var result = workouts.Select(w => new WorkoutDisplayDTO
+            {
+                WorkoutId = w.WorkoutId,
+                Name = w.Name,
+                Exercises = w.WorkoutExercises.Select(we => new ExerciseDisplayDTO
+                {
+                    Name = we.Exercises.Name,
+                    Sets = we.Exercises.Sets,
+                    Reps = we.Exercises.Reps
+                }).ToList()
+            }).ToList();
+
+            return Ok(result);
         }
 
-        [HttpPut("UpdateWorkout")]
-        public void UpdateWorkout(Workout workout)
-        {
-            Workout workoutUpdate = _context.Workouts.FirstOrDefault((x) => x.WorkoutId == workout.WorkoutId);
-            workoutUpdate.Name = workout.Name;
-            _context.SaveChanges();
-        }
-        [HttpPut("UpdateExercise")]
-        public void UpdateExercise(Exercises exercise)
-        {
-            Exercises exerciseUpdate = _context.Exercises.FirstOrDefault((x) => x.ExerciseId == exercise.WorkoutId);
-            exerciseUpdate.Name = exercise.Name;
-            exerciseUpdate.Sets = exercise.Sets;
-            exerciseUpdate.Reps = exercise.Reps;
-            exerciseUpdate.WorkoutId = exercise.WorkoutId;
-            _context.SaveChanges();
-        }
         [HttpDelete("DeleteWorkout")]
-        public void DeleteWorkout(long id)
+        public async Task<IActionResult> DeleteWorkout(int id)
         {
-            var workout = _context.Workouts.FirstOrDefault(c => c.WorkoutId == id);
-            if (workout != null)
-            {
-                _context.Workouts.Remove(workout);
-                _context.SaveChanges();
-            }
+            var workout = await _context.Workouts
+                .Include(w => w.WorkoutExercises)
+                .FirstOrDefaultAsync(w => w.WorkoutId == id);
+
+            if (workout == null) return NotFound();
+
+            // Remove linked WorkoutExercises first (if cascade delete isn't on)
+            _context.WorkoutExercises.RemoveRange(workout.WorkoutExercises);
+
+            _context.Workouts.Remove(workout);
+            await _context.SaveChangesAsync();
+
+            return Ok();
         }
-        [HttpDelete("DeleteExercise")]
-        public void DeleteExercise(long id)
+
+
+        [HttpPost("AssignExerciseToWorkout")]
+        public async Task <IActionResult> AssignExerciseToWorkout(WorkoutExerciseDTO workoutexercise)
         {
-            var exercise = _context.Exercises.FirstOrDefault(c => c.ExerciseId == id);
-            if (exercise != null)
+            Workout? workout = await _context.Workouts.FindAsync(workoutexercise.WorkoutId);
+            Exercises? exercises = await _context.Exercises.FindAsync(workoutexercise.ExerciseId);
+
+            if (workout == null)
             {
-                _context.Exercises.Remove(exercise);
-                _context.SaveChanges();
+                return NotFound("Workout Not Found");
             }
+            if (exercises == null)
+            {
+                return NotFound("Exercise Not Found");
+            }
+            WorkoutExercise workoutExercise = new WorkoutExercise
+            {
+                WorkoutId = workoutexercise.WorkoutId,
+                ExerciseId = workoutexercise.ExerciseId,
+            };
+            await _context.WorkoutExercises.AddAsync(workoutExercise);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpDelete("RemoveExerciseFromWorkout")]
+        public IActionResult RemoveExerciseFromWorkout(int workoutId, int exerciseId)
+        {
+            var we = _context.WorkoutExercises.FirstOrDefault(
+                x => x.WorkoutId == workoutId && x.ExerciseId == exerciseId);
+
+            if (we == null) return NotFound();
+
+            _context.WorkoutExercises.Remove(we);
+            _context.SaveChanges();
+            return Ok();
         }
     }
 }

@@ -1,29 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerapi\\workoutloggerapi\\data\\workoutloggerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\data\\workoutloggerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerapi\\workoutloggerapi\\controllers\\workoutloggercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\controllers\\workoutloggercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\controllers\\workoutloggercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerapi\\workoutloggerapi\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\dtos\\exercisedisplaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\dtos\\exercisedisplaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerapi\\workoutloggerapi\\models\\exercises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\models\\exercises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\models\\exercises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerapi\\workoutloggerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\dtos\\workoutdisplaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\dtos\\workoutdisplaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\controllers\\exercisecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\controllers\\exercisecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\models\\workoutexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\models\\workoutexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\dtos\\workoutdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\dtos\\workoutdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\dtos\\workoutexercisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\dtos\\workoutexercisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\data\\workoutloggerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\data\\workoutloggerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerapi\\workoutloggerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|c:\\users\\ktaylor2\\desktop\\softwareengineering\\workoutloggerproject\\workoutloggerapi\\workoutloggerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5B886E94-D1C7-494B-919F-7714ED3B9A23}|WorkoutLoggerAPI\\WorkoutLoggerAPI.csproj|solutionrelative:workoutloggerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -34,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 272,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,79 +74,164 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "Workout.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Workout.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Models\\Workout.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Workout.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\Models\\Workout.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:39:27.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WorkoutController.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\WorkoutController.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Controllers\\WorkoutController.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\WorkoutController.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\Controllers\\WorkoutController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T17:31:40.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Program.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:43:35.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WorkoutLoggerDb.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:41:11.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "WorkoutLoggerController.cs",
-              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\WorkoutLoggerController.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\WorkoutLoggerController.cs",
               "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Controllers\\WorkoutLoggerController.cs",
-              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\WorkoutLoggerController.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\WorkoutLoggerController.cs",
               "RelativeToolTip": "WorkoutLoggerAPI\\Controllers\\WorkoutLoggerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T17:48:11.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\appsettings.json",
-              "RelativeToolTip": "WorkoutLoggerAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-29T17:45:48.437Z"
+              "DocumentIndex": 6,
+              "Title": "WorkoutExercise.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\WorkoutExercise.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Models\\WorkoutExercise.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\WorkoutExercise.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\Models\\WorkoutExercise.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T17:42:21.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Program.cs",
-              "RelativeToolTip": "WorkoutLoggerAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "WorkoutExerciseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\WorkoutExerciseDTO.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\DTOs\\WorkoutExerciseDTO.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\WorkoutExerciseDTO.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\DTOs\\WorkoutExerciseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:43:35.928Z"
+              "WhenOpened": "2025-05-20T18:27:36.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WorkoutLoggerDb.cs",
-              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
-              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
-              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
-              "RelativeToolTip": "WorkoutLoggerAPI\\Data\\WorkoutLoggerDb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ExerciseDisplayDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\ExerciseDisplayDTO.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\DTOs\\ExerciseDisplayDTO.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\ExerciseDisplayDTO.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\DTOs\\ExerciseDisplayDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:41:11.641Z",
+              "WhenOpened": "2025-05-22T02:42:28.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Workout.cs",
-              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Workout.cs",
-              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Models\\Workout.cs",
-              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Workout.cs",
-              "RelativeToolTip": "WorkoutLoggerAPI\\Models\\Workout.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Title": "Exercises.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Exercises.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Models\\Exercises.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Exercises.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\Models\\Exercises.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:39:27.8Z",
+              "WhenOpened": "2025-04-29T17:38:02.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Exercises.cs",
-              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Exercises.cs",
-              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Models\\Exercises.cs",
-              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Models\\Exercises.cs",
-              "RelativeToolTip": "WorkoutLoggerAPI\\Models\\Exercises.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "WorkoutDisplayDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\WorkoutDisplayDTO.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\DTOs\\WorkoutDisplayDTO.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\WorkoutDisplayDTO.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\DTOs\\WorkoutDisplayDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:38:02.144Z",
+              "WhenOpened": "2025-05-22T02:41:58.696Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExerciseController.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\ExerciseController.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\Controllers\\ExerciseController.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\Controllers\\ExerciseController.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\Controllers\\ExerciseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T17:46:08.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WorkoutDetailDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\WorkoutDetailDTO.cs",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\DTOs\\WorkoutDetailDTO.cs",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\DTOs\\WorkoutDetailDTO.cs",
+              "RelativeToolTip": "WorkoutLoggerAPI\\DTOs\\WorkoutDetailDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:32:10.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "WorkoutLoggerAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\ktaylor2\\Desktop\\SoftwareEngineering\\WorkoutLoggerProject\\WorkoutLoggerAPI\\WorkoutLoggerAPI\\appsettings.json",
+              "RelativeToolTip": "WorkoutLoggerAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-29T17:45:48.437Z"
             }
           ]
         }

@@ -1,56 +1,56 @@
 ﻿@page "/create-workout"
-@inject HttpClient Http
 @using WorkoutLoggerFrontEnd2.Models
-@using Radzen.Blazor
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
 @using Radzen
+@using Radzen.Blazor
 
-<h1>Create a New Workout</h1>
+<h3>Create Workout</h3>
 
-<RadzenRow AlignItems="AlignItems.End" Wrap="FlexWrap.Wrap" Gap="1rem" class="rz-p-sm-12">
-    <RadzenColumn Size="12" SizeMD="6" SizeLG="3">
-        <RadzenFormField Text="Name" Style="width: 100%;">
-            <RadzenTextBox @bind-Value="workoutName" />
-        </RadzenFormField>
-    </RadzenColumn>
-    <RadzenColumn Size="12" SizeMD="6" SizeLG="3">
-        <RadzenFormField Text="TypeID" Style="width: 100%;">
-            <RadzenTextBox @bind-Value="typeId" />
-        </RadzenFormField>
-    </RadzenColumn>
-    <RadzenColumn Size="12" SizeMD="6" SizeLG="3">
-        <RadzenFormField Text="Add Exercise" Style="width: 100%;">
-            <RadzenTextBox @bind-Value="addExercise" />
-        </RadzenFormField>
-    </RadzenColumn>
-</RadzenRow>
+<RadzenTemplateForm Data="@newWorkout" TItem="Workout" Submit="@HandleSubmit" Method="post">
+    <RadzenFieldset Text="Workout Info">
+        <label>Name</label>
+        <RadzenTextBox @bind-Value="newWorkout.Name" Name="Name" Style="width:100%" />
+    </RadzenFieldset>
 
-<RadzenButton Text="Create Workout"
-              Click="SubmitWorkout"
-              Style="margin-top: 1rem;"
-              ButtonStyle="ButtonStyle.Primary" />
+    <RadzenButton ButtonType="ButtonType.Submit"
+                  Text="Submit"
+                  Style="margin-top: 20px;" />
+</RadzenTemplateForm>
+
+<p style="color: green">@statusMessage</p>
 
 @code {
-    string workoutName = "";
-    string typeId = ""; // Placeholder for later
-    string addExercise = ""; // Placeholder for later
+    Workout newWorkout = new Workout
+        {
+            Exercises = new List<Exercises>()
+        };
 
-    async Task SubmitWorkout()
+    string statusMessage = "";
+
+    private async Task HandleSubmit()
     {
-        var newWorkout = new Workout
+        try
+        {
+            var response = await Http.PostAsJsonAsync("Workout/PostWorkout", newWorkout);
+
+            if (response.IsSuccessStatusCode)
             {
-                Name = workoutName
-            };
-
-        var response = await Http.PostAsJsonAsync("api/WorkoutLogger/PostWorkout", newWorkout);
-
-        if (response.IsSuccessStatusCode)
-        {
-            Console.WriteLine("Workout created!");
-            workoutName = "";
+                statusMessage = "Workout created!";
+                Navigation.NavigateTo("/myworkouts");
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                statusMessage = $"Failed: {response.StatusCode}, {error}";
+                Console.WriteLine(statusMessage);
+            }
         }
-        else
+        catch (Exception ex)
         {
-            Console.WriteLine($"Failed to create workout. Status: {response.StatusCode}");
+            statusMessage = $"Exception: {ex.Message}";
+            Console.WriteLine(statusMessage);
         }
     }
 }

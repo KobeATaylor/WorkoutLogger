@@ -1,0 +1,75 @@
+﻿@page "/myworkouts"
+@using WorkoutLoggerFrontEnd2.Models
+@inject HttpClient Http
+@inject NavigationManager Nav
+@rendermode InteractiveServer
+@using Radzen
+@using Radzen.Blazor
+
+<h3 class="rz-mb-4">My Workouts</h3>
+
+@if (workouts == null)
+{
+    <p>Loading...</p>
+}
+else if (!workouts.Any())
+{
+    <p>No workouts yet.</p>
+}
+else
+{
+    <div style="max-height: 600px; overflow-y: auto;">
+        <RadzenStack Gap="1rem">
+            @foreach (var workout in workouts)
+            {
+                <RadzenCard Style="padding: 1rem;">
+                    <RadzenHeading Size="HeadingSize.H5">@workout.Name</RadzenHeading>
+
+                    @if (workout.Exercises != null && workout.Exercises.Any())
+                    {
+                        <ul>
+                            @foreach (var ex in workout.Exercises)
+                            {
+                                <li><strong>@ex.Name</strong> — @ex.Sets sets × @ex.Reps reps</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No exercises added yet.</p>
+                    }
+
+                    <RadzenButton Text="Edit" Icon="edit" Style="margin-right: 10px;" Click="@(() => EditWorkout(workout.WorkoutId))" />
+                    <RadzenButton Text="Delete" Icon="delete" ButtonStyle="ButtonStyle.Danger" Click="@(() => DeleteWorkoutAsync(workout.WorkoutId))" />
+                </RadzenCard>
+            }
+        </RadzenStack>
+    </div>
+}
+
+@code {
+    List<Workout>? workouts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadWorkouts();
+    }
+
+    async Task LoadWorkouts()
+    {
+        workouts = await Http.GetFromJsonAsync<List<Workout>>("api/WorkoutLogger/GetWorkout");
+    }
+
+    void EditWorkout(int id)
+    {
+        // Navigate to a page like /editworkout/3
+        Nav.NavigateTo($"/editworkout/{id}");
+    }
+
+    async Task DeleteWorkoutAsync(int id)
+    {
+        await Http.DeleteAsync($"api/WorkoutLogger/DeleteWorkout?id={id}");
+        await LoadWorkouts(); // reload list
+        StateHasChanged();
+    }
+}
